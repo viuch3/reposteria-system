@@ -10,6 +10,7 @@ from app.services.product_service import (
     list_products,
     update_product,
 )
+from app.services.production_service import create_production, list_productions
 from app.services.recipe_service import (
     create_recipe_detail,
     delete_recipe_detail,
@@ -37,6 +38,7 @@ from app.services.user_service import (
 __all__ = [
     "create_inventory_movement",
     "create_product",
+    "create_production",
     "create_recipe_detail",
     "create_sale",
     "create_supply",
@@ -52,6 +54,7 @@ __all__ = [
     "get_user_by_id",
     "list_inventory_movements",
     "list_products",
+    "list_productions",
     "list_recipe_details",
     "list_sales",
     "list_supplies",

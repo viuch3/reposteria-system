@@ -12,7 +12,6 @@ class ProductionBase(BaseModel):
     batch: str = Field(..., min_length=1, max_length=100)
     expiration_date: date | None = None
     notes: str | None = Field(default=None, max_length=255)
-    user_id: int = Field(..., gt=0)
 
     @field_validator("batch")
     @classmethod
