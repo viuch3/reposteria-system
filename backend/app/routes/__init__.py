@@ -9,6 +9,7 @@ from app.routes.recipes import router as recipes_router
 from app.routes.sales import router as sales_router
 from app.routes.supplies import router as supplies_router
 from app.routes.users import router as users_router
+from app.routes.weather import router as weather_router
 
 
 api_router = APIRouter()
@@ -21,3 +22,4 @@ api_router.include_router(recipes_router)
 api_router.include_router(sales_router)
 api_router.include_router(supplies_router)
 api_router.include_router(users_router)
+api_router.include_router(weather_router)

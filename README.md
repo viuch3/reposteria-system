@@ -98,6 +98,7 @@ Rutas base disponibles despues de iniciar:
 - `http://127.0.0.1:8000/api/v1/sales/`
 - `http://127.0.0.1:8000/api/v1/supplies/`
 - `http://127.0.0.1:8000/api/v1/users/`
+- `http://127.0.0.1:8000/api/v1/weather/`
 - `http://127.0.0.1:8000/docs`
 
 ## Configuracion de entorno

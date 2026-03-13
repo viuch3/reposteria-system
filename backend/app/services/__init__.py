@@ -34,6 +34,12 @@ from app.services.user_service import (
     set_user_active_status,
     update_user,
 )
+from app.services.weather_service import (
+    create_weather_record,
+    get_weather_record_by_date,
+    get_weather_record_by_id,
+    list_weather_records,
+)
 
 __all__ = [
     "create_inventory_movement",
@@ -43,6 +49,7 @@ __all__ = [
     "create_sale",
     "create_supply",
     "create_user",
+    "create_weather_record",
     "deactivate_product",
     "delete_recipe_detail",
     "get_product_by_code",
@@ -52,6 +59,8 @@ __all__ = [
     "get_supply_by_id",
     "get_user_by_email",
     "get_user_by_id",
+    "get_weather_record_by_date",
+    "get_weather_record_by_id",
     "list_inventory_movements",
     "list_products",
     "list_productions",
@@ -59,6 +68,7 @@ __all__ = [
     "list_sales",
     "list_supplies",
     "list_users",
+    "list_weather_records",
     "set_user_active_status",
     "update_product",
     "update_recipe_detail_quantity",
