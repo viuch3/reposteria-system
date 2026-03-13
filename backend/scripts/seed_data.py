@@ -1,7 +1,11 @@
 from datetime import date
 from decimal import Decimal
+from pathlib import Path
+import sys
 
 from sqlalchemy import select
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import app.models
 from app.core.security import get_password_hash
