@@ -28,6 +28,7 @@ def read_root() -> dict[str, str]:
         "message": "Reposteria System API en funcionamiento",
         "docs": "/docs",
         "api_base": settings.api_v1_prefix,
+        "auth_login": f"{settings.api_v1_prefix}/auth/login",
     }
 
 
