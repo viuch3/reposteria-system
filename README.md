@@ -43,6 +43,12 @@ reposteria-system/
 │   └── venv/
 ├── docs/
 ├── frontend/
+│   ├── assets/
+│   ├── components/
+│   ├── css/
+│   ├── js/
+│   ├── pages/
+│   └── index.html
 ├── .gitignore
 └── README.md
 ```

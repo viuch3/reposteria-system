@@ -1,0 +1,20 @@
+:root {
+  --font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --color-bg: #f7f2eb;
+  --color-surface: #fffaf5;
+  --color-surface-strong: #ffffff;
+  --color-text: #2f241f;
+  --color-text-soft: #6d5b51;
+  --color-primary: #8b4513;
+  --color-primary-strong: #6f340c;
+  --color-border: #e2d3c4;
+  --color-shadow: rgba(71, 45, 28, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
