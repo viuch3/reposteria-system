@@ -93,6 +93,7 @@ Rutas base disponibles despues de iniciar:
 - `http://127.0.0.1:8000/api/v1/health/`
 - `http://127.0.0.1:8000/api/v1/inventory/movements`
 - `http://127.0.0.1:8000/api/v1/products/`
+- `http://127.0.0.1:8000/api/v1/recipes/products/{product_id}`
 - `http://127.0.0.1:8000/api/v1/sales/`
 - `http://127.0.0.1:8000/api/v1/supplies/`
 - `http://127.0.0.1:8000/api/v1/users/`
