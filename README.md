@@ -22,6 +22,8 @@ En esta etapa ya existe la estructura base del proyecto, el entorno virtual inic
 - [Stack tecnico](/Users/viuch3/Documents/reposteria-system/docs/technical-stack.md)
 - [Configuracion PostgreSQL](/Users/viuch3/Documents/reposteria-system/docs/postgresql-setup.md)
 - [Modelo ER inicial](/Users/viuch3/Documents/reposteria-system/docs/er-model.md)
+- [Carga inicial](/Users/viuch3/Documents/reposteria-system/docs/initial-data-guide.md)
+- [Manual de usuario](/Users/viuch3/Documents/reposteria-system/docs/user-manual.md)
 
 ## Forma de trabajo
 
@@ -115,6 +117,16 @@ Desde la raiz del proyecto:
 source backend/venv/bin/activate
 cd backend
 pytest
+```
+
+## Como cargar datos iniciales
+
+Desde la raiz del proyecto:
+
+```bash
+source backend/venv/bin/activate
+cd backend
+python scripts/seed_data.py
 ```
 
 ## Configuracion de entorno
