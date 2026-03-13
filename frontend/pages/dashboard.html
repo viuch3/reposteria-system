@@ -40,42 +40,24 @@
         </header>
 
         <section class="kpi-grid">
-          <article class="kpi-card">
-            <div class="stat">
-              <span class="stat-label">Ventas del dia</span>
-              <strong class="stat-value">$ 480.000</strong>
-            </div>
-          </article>
-          <article class="kpi-card">
-            <div class="stat">
-              <span class="stat-label">Produccion activa</span>
-              <strong class="stat-value">6 lotes</strong>
-            </div>
-          </article>
-          <article class="kpi-card">
-            <div class="stat">
-              <span class="stat-label">Stock bajo</span>
-              <strong class="stat-value">4 alertas</strong>
-            </div>
-          </article>
-          <article class="kpi-card">
-            <div class="stat">
-              <span class="stat-label">Ticket promedio</span>
-              <strong class="stat-value">$ 23.500</strong>
-            </div>
-          </article>
+          <article class="kpi-card"><div class="stat"><span class="stat-label">Ventas del dia</span><strong class="stat-value" data-kpi-sales-today>$ 0</strong></div></article>
+          <article class="kpi-card"><div class="stat"><span class="stat-label">Ventas del mes</span><strong class="stat-value" data-kpi-sales-month>$ 0</strong></div></article>
+          <article class="kpi-card"><div class="stat"><span class="stat-label">Produccion hoy</span><strong class="stat-value" data-kpi-productions>0</strong></div></article>
+          <article class="kpi-card"><div class="stat"><span class="stat-label">Ticket promedio</span><strong class="stat-value" data-kpi-average-ticket>$ 0</strong></div></article>
         </section>
 
         <section class="section-grid">
           <article class="table-card">
             <div class="card-header">
               <div>
-                <p class="eyebrow">Grafica</p>
+                <p class="eyebrow">Resumen</p>
                 <h2>Ventas semanales</h2>
               </div>
-              <span class="badge badge-success">Chart.js listo</span>
+              <span class="badge badge-success">Ultimos 7 dias</span>
             </div>
-            <div class="chart-placeholder"></div>
+            <div class="mini-list" data-sales-overview>
+              <div class="mini-item"><span>Cargando</span><strong>...</strong></div>
+            </div>
           </article>
 
           <article class="table-card">
@@ -84,12 +66,36 @@
                 <p class="eyebrow">Alertas</p>
                 <h2>Stock bajo</h2>
               </div>
-              <span class="badge badge-warning">Revisar hoy</span>
+              <span class="badge badge-warning" data-kpi-low-stock>0 alertas</span>
             </div>
-            <div class="mini-list">
-              <div class="mini-item"><span>Harina premium</span><strong>8 kg</strong></div>
-              <div class="mini-item"><span>Chocolate semiamargo</span><strong>3 kg</strong></div>
-              <div class="mini-item"><span>Huevos</span><strong>24 und</strong></div>
+            <div class="mini-list" data-low-stock-list>
+              <div class="mini-item"><span>Cargando</span><strong>...</strong></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-grid" style="margin-top: 1.5rem;">
+          <article class="table-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Actividad</p>
+                <h2>Ultimas ventas</h2>
+              </div>
+            </div>
+            <div class="mini-list" data-recent-sales>
+              <div class="mini-item"><span>Cargando</span><strong>...</strong></div>
+            </div>
+          </article>
+
+          <article class="table-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Top productos</p>
+                <h2>Mas vendidos</h2>
+              </div>
+            </div>
+            <div class="mini-list" data-top-products>
+              <div class="mini-item"><span>Cargando</span><strong>...</strong></div>
             </div>
           </article>
         </section>
