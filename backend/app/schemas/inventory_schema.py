@@ -11,7 +11,6 @@ class InventoryMovementBase(BaseModel):
     supply_id: int | None = Field(default=None, gt=0)
     quantity: float = Field(..., gt=0)
     reason: str | None = Field(default=None, max_length=255)
-    user_id: int = Field(..., gt=0)
 
     @model_validator(mode="after")
     def validate_target(self) -> "InventoryMovementBase":

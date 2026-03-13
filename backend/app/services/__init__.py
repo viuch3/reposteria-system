@@ -1,3 +1,7 @@
+from app.services.inventory_service import (
+    create_inventory_movement,
+    list_inventory_movements,
+)
 from app.services.product_service import (
     create_product,
     deactivate_product,
@@ -24,6 +28,7 @@ from app.services.user_service import (
 )
 
 __all__ = [
+    "create_inventory_movement",
     "create_product",
     "create_sale",
     "create_supply",
@@ -35,6 +40,7 @@ __all__ = [
     "get_supply_by_id",
     "get_user_by_email",
     "get_user_by_id",
+    "list_inventory_movements",
     "list_products",
     "list_sales",
     "list_supplies",
