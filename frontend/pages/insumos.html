@@ -9,15 +9,56 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Insumos</p>
-        <h1>Control de materias primas</h1>
-      </header>
-      <section class="placeholder-panel">
-        <p>Espacio preparado para tabla, formulario y alertas de vencimiento.</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand"><p class="eyebrow">Reposteria</p><h1>System</h1></div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./productos.html">Productos</a>
+          <a class="active" href="./insumos.html">Insumos</a>
+          <a href="./ventas.html">Ventas</a>
+          <a href="./inventario.html">Inventario</a>
+          <a href="./produccion.html">Produccion</a>
+          <a href="./reportes.html">Reportes</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Insumos</p>
+            <h1>Materias primas y vencimientos</h1>
+            <p class="page-subtitle">Vista pensada para control de compras, alertas y reposicion.</p>
+          </div>
+          <a class="button button-primary" href="#">Nuevo insumo</a>
+        </header>
+        <section class="section-grid">
+          <article class="table-card">
+            <div class="card-header"><h2>Alertas de vencimiento</h2><span class="badge badge-warning">3 proximas</span></div>
+            <div class="mini-list">
+              <div class="mini-item"><span>Crema para batir</span><strong>15 Mar</strong></div>
+              <div class="mini-item"><span>Queso crema</span><strong>18 Mar</strong></div>
+              <div class="mini-item"><span>Fresas</span><strong>Hoy</strong></div>
+            </div>
+          </article>
+          <article class="table-card">
+            <div class="card-header"><h2>Stock bajo</h2><span class="badge badge-danger">Reposicion</span></div>
+            <div class="mini-list">
+              <div class="mini-item"><span>Huevos</span><strong>24 und</strong></div>
+              <div class="mini-item"><span>Harina premium</span><strong>8 kg</strong></div>
+            </div>
+          </article>
+        </section>
+        <article class="table-card" style="margin-top: 1.5rem;">
+          <table class="table">
+            <thead><tr><th>Insumo</th><th>Categoria</th><th>Stock</th><th>Vence</th><th>Costo</th></tr></thead>
+            <tbody>
+              <tr><td>Harina premium</td><td>Secos</td><td>8 kg</td><td>12/06/2026</td><td>$ 4.500</td></tr>
+              <tr><td>Chocolate 70%</td><td>Reposteria</td><td>3 kg</td><td>21/05/2026</td><td>$ 19.000</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </main>
+    </div>
     <script type="module" src="../js/insumos.js"></script>
   </body>
 </html>

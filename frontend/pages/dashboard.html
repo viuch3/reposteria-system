@@ -9,15 +9,92 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Dashboard</p>
-        <h1>Vista general del sistema</h1>
-      </header>
-      <section class="placeholder-panel">
-        <p>Plantilla base lista para conectar KPIs, ultimas ventas y stock bajo.</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <p class="eyebrow">Reposteria</p>
+          <h1>System</h1>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="active" href="./dashboard.html">Dashboard</a>
+          <a href="./productos.html">Productos</a>
+          <a href="./insumos.html">Insumos</a>
+          <a href="./ventas.html">Ventas</a>
+          <a href="./inventario.html">Inventario</a>
+          <a href="./produccion.html">Produccion</a>
+          <a href="./reportes.html">Reportes</a>
+          <a href="./login.html">Cerrar sesion</a>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h1>Resumen del dia</h1>
+            <p class="page-subtitle">
+              Vista central para revisar ventas, niveles de stock y actividad reciente.
+            </p>
+          </div>
+          <a class="button button-primary" href="./ventas.html">Registrar venta</a>
+        </header>
+
+        <section class="kpi-grid">
+          <article class="kpi-card">
+            <div class="stat">
+              <span class="stat-label">Ventas del dia</span>
+              <strong class="stat-value">$ 480.000</strong>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <div class="stat">
+              <span class="stat-label">Produccion activa</span>
+              <strong class="stat-value">6 lotes</strong>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <div class="stat">
+              <span class="stat-label">Stock bajo</span>
+              <strong class="stat-value">4 alertas</strong>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <div class="stat">
+              <span class="stat-label">Ticket promedio</span>
+              <strong class="stat-value">$ 23.500</strong>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-grid">
+          <article class="table-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Grafica</p>
+                <h2>Ventas semanales</h2>
+              </div>
+              <span class="badge badge-success">Chart.js listo</span>
+            </div>
+            <div class="chart-placeholder"></div>
+          </article>
+
+          <article class="table-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Alertas</p>
+                <h2>Stock bajo</h2>
+              </div>
+              <span class="badge badge-warning">Revisar hoy</span>
+            </div>
+            <div class="mini-list">
+              <div class="mini-item"><span>Harina premium</span><strong>8 kg</strong></div>
+              <div class="mini-item"><span>Chocolate semiamargo</span><strong>3 kg</strong></div>
+              <div class="mini-item"><span>Huevos</span><strong>24 und</strong></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
     <script type="module" src="../js/dashboard.js"></script>
   </body>
 </html>

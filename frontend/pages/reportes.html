@@ -9,15 +9,44 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Reportes</p>
-        <h1>Resumenes operativos</h1>
-      </header>
-      <section class="placeholder-panel">
-        <p>Espacio preparado para filtros, tablas y graficas del sistema.</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand"><p class="eyebrow">Reposteria</p><h1>System</h1></div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./productos.html">Productos</a>
+          <a href="./insumos.html">Insumos</a>
+          <a href="./ventas.html">Ventas</a>
+          <a href="./inventario.html">Inventario</a>
+          <a href="./produccion.html">Produccion</a>
+          <a class="active" href="./reportes.html">Reportes</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Reportes</p>
+            <h1>Indicadores y consultas</h1>
+            <p class="page-subtitle">Filtros, tablas y graficas listas para conectarse con datos reales.</p>
+          </div>
+          <a class="button button-secondary" href="#">Exportar</a>
+        </header>
+        <section class="section-grid">
+          <article class="table-card">
+            <div class="card-header"><h2>Ventas por rango</h2></div>
+            <div class="chart-placeholder"></div>
+          </article>
+          <article class="table-card">
+            <div class="card-header"><h2>Reportes rapidos</h2></div>
+            <div class="mini-list">
+              <div class="mini-item"><span>Top productos</span><strong>5 items</strong></div>
+              <div class="mini-item"><span>Movimientos de inventario</span><strong>32 registros</strong></div>
+              <div class="mini-item"><span>Produccion semanal</span><strong>14 lotes</strong></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
     <script type="module" src="../js/dashboard.js"></script>
   </body>
 </html>

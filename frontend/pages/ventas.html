@@ -9,15 +9,52 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Ventas</p>
-        <h1>Registro diario de ventas</h1>
-      </header>
-      <section class="placeholder-panel">
-        <p>Espacio preparado para formulario dinamico, carrito y total automatico.</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand"><p class="eyebrow">Reposteria</p><h1>System</h1></div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./productos.html">Productos</a>
+          <a href="./insumos.html">Insumos</a>
+          <a class="active" href="./ventas.html">Ventas</a>
+          <a href="./inventario.html">Inventario</a>
+          <a href="./produccion.html">Produccion</a>
+          <a href="./reportes.html">Reportes</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Ventas</p>
+            <h1>Punto de venta</h1>
+            <p class="page-subtitle">Formulario de venta con carrito, detalle y resumen de total.</p>
+          </div>
+          <span class="badge badge-success">Caja abierta</span>
+        </header>
+        <section class="split-layout">
+          <article class="form-card">
+            <div class="card-header"><h2>Agregar productos</h2></div>
+            <form class="form-grid">
+              <div class="field"><label>Producto</label><select class="select"><option>Torta de Chocolate</option></select></div>
+              <div class="field"><label>Cantidad</label><input class="input" type="number" value="1" /></div>
+              <div class="field"><label>Canal</label><select class="select"><option>Mostrador</option></select></div>
+              <div class="field"><label>Hora</label><input class="input" type="time" value="10:30" /></div>
+            </form>
+          </article>
+          <article class="table-card">
+            <div class="card-header"><h2>Carrito</h2><span class="badge badge-warning">2 items</span></div>
+            <div class="mini-list">
+              <div class="mini-item"><span>Torta de Chocolate x1</span><strong>$ 45.000</strong></div>
+              <div class="mini-item"><span>Galleta mantequilla x3</span><strong>$ 18.000</strong></div>
+            </div>
+            <div style="margin-top: 1rem;" class="stat">
+              <span class="stat-label">Total</span>
+              <strong class="stat-value">$ 63.000</strong>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
     <script type="module" src="../js/ventas.js"></script>
   </body>
 </html>

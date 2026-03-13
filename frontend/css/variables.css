@@ -1,20 +1,35 @@
 :root {
-  --font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --color-bg: #f7f2eb;
-  --color-surface: #fffaf5;
-  --color-surface-strong: #ffffff;
-  --color-text: #2f241f;
-  --color-text-soft: #6d5b51;
-  --color-primary: #8b4513;
-  --color-primary-strong: #6f340c;
-  --color-border: #e2d3c4;
-  --color-shadow: rgba(71, 45, 28, 0.08);
+  --font-family-base: "Trebuchet MS", "Gill Sans", sans-serif;
+  --font-family-display: Georgia, "Times New Roman", serif;
+  --color-bg: #f6efe6;
+  --color-bg-strong: #ead7bf;
+  --color-surface: rgba(255, 251, 247, 0.9);
+  --color-surface-strong: #fffdf9;
+  --color-text: #33241a;
+  --color-text-soft: #6c594c;
+  --color-primary: #9a3412;
+  --color-primary-strong: #7c2d12;
+  --color-accent: #d97706;
+  --color-accent-soft: #fde7c5;
+  --color-success: #2f855a;
+  --color-warning: #c27803;
+  --color-danger: #b83232;
+  --color-border: rgba(120, 83, 54, 0.18);
+  --color-shadow: rgba(75, 47, 28, 0.12);
+  --gradient-page:
+    radial-gradient(circle at top left, rgba(255, 221, 170, 0.9), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(154, 52, 18, 0.12), transparent 28%),
+    linear-gradient(180deg, #fff8f0 0%, #f5ecdf 100%);
+  --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 16px;
-  --radius-sm: 10px;
-  --space-1: 0.5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2rem;
-  --space-5: 3rem;
+  --radius-sm: 12px;
+  --space-1: 0.35rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --shadow-soft: 0 18px 45px var(--color-shadow);
+  --shadow-card: 0 24px 70px rgba(86, 56, 33, 0.15);
 }

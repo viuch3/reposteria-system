@@ -9,15 +9,64 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Productos</p>
-        <h1>Catalogo de productos</h1>
-      </header>
-      <section class="placeholder-panel">
-        <p>Espacio preparado para tabla, formulario y buscador de productos.</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand"><p class="eyebrow">Reposteria</p><h1>System</h1></div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a class="active" href="./productos.html">Productos</a>
+          <a href="./insumos.html">Insumos</a>
+          <a href="./ventas.html">Ventas</a>
+          <a href="./inventario.html">Inventario</a>
+          <a href="./produccion.html">Produccion</a>
+          <a href="./reportes.html">Reportes</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Productos</p>
+            <h1>Catalogo de vitrina</h1>
+            <p class="page-subtitle">Tabla, formulario y filtros listos para integracion con el backend.</p>
+          </div>
+          <a class="button button-primary" href="#">Nuevo producto</a>
+        </header>
+        <section class="split-layout">
+          <article class="form-card">
+            <div class="card-header"><h2>Crear o editar</h2><span class="badge badge-success">Admin</span></div>
+            <form class="form-grid">
+              <div class="field"><label>Codigo</label><input class="input" placeholder="TORTA-001" /></div>
+              <div class="field"><label>Nombre</label><input class="input" placeholder="Torta Red Velvet" /></div>
+              <div class="field"><label>Categoria</label><input class="input" placeholder="Tortas" /></div>
+              <div class="field"><label>Unidad</label><input class="input" placeholder="unidad" /></div>
+              <div class="field"><label>Precio venta</label><input class="input" placeholder="45000" /></div>
+              <div class="field"><label>Precio costo</label><input class="input" placeholder="28000" /></div>
+            </form>
+          </article>
+          <article class="table-card">
+            <div class="card-header"><h2>Resumen rapido</h2><span class="badge badge-warning">12 activos</span></div>
+            <div class="mini-list">
+              <div class="mini-item"><span>Mas vendido</span><strong>Cheesecake</strong></div>
+              <div class="mini-item"><span>Stock critico</span><strong>Brownie x6</strong></div>
+              <div class="mini-item"><span>Margen alto</span><strong>Galletas premium</strong></div>
+            </div>
+          </article>
+        </section>
+        <article class="table-card" style="margin-top: 1.5rem;">
+          <div class="toolbar">
+            <input class="input" placeholder="Buscar por nombre o codigo" />
+            <select class="select"><option>Todas las categorias</option></select>
+          </div>
+          <table class="table">
+            <thead><tr><th>Codigo</th><th>Producto</th><th>Precio</th><th>Stock</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td>TORTA-001</td><td>Torta de Chocolate</td><td>$ 45.000</td><td>8</td><td><span class="badge badge-success">Activo</span></td></tr>
+              <tr><td>GAL-004</td><td>Galleta mantequilla</td><td>$ 6.000</td><td>24</td><td><span class="badge badge-success">Activo</span></td></tr>
+            </tbody>
+          </table>
+        </article>
+      </main>
+    </div>
     <script type="module" src="../js/productos.js"></script>
   </body>
 </html>

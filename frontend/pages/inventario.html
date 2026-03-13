@@ -9,15 +9,39 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Inventario</p>
-        <h1>Movimientos y trazabilidad</h1>
-      </header>
-      <section class="placeholder-panel">
-        <p>Espacio preparado para historial de movimientos y formularios de ajuste.</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand"><p class="eyebrow">Reposteria</p><h1>System</h1></div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./productos.html">Productos</a>
+          <a href="./insumos.html">Insumos</a>
+          <a href="./ventas.html">Ventas</a>
+          <a class="active" href="./inventario.html">Inventario</a>
+          <a href="./produccion.html">Produccion</a>
+          <a href="./reportes.html">Reportes</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Inventario</p>
+            <h1>Movimientos y ajustes</h1>
+            <p class="page-subtitle">Entradas, salidas y mermas auditadas por usuario y motivo.</p>
+          </div>
+          <a class="button button-primary" href="#">Registrar movimiento</a>
+        </header>
+        <article class="table-card">
+          <table class="table">
+            <thead><tr><th>Fecha</th><th>Tipo</th><th>Item</th><th>Cantidad</th><th>Motivo</th><th>Usuario</th></tr></thead>
+            <tbody>
+              <tr><td>12/03/2026 09:00</td><td><span class="badge badge-success">Entrada</span></td><td>Torta de Chocolate</td><td>+6</td><td>Produccion lote A12</td><td>admin</td></tr>
+              <tr><td>12/03/2026 08:30</td><td><span class="badge badge-danger">Salida</span></td><td>Chocolate 70%</td><td>-2 kg</td><td>Produccion lote A12</td><td>produccion</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </main>
+    </div>
     <script type="module" src="../js/inventario.js"></script>
   </body>
 </html>

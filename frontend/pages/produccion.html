@@ -9,15 +9,49 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Produccion</p>
-        <h1>Control de elaboracion y lotes</h1>
-      </header>
-      <section class="placeholder-panel">
-        <p>Espacio preparado para formulario de produccion, lotes y vencimiento.</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand"><p class="eyebrow">Reposteria</p><h1>System</h1></div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./productos.html">Productos</a>
+          <a href="./insumos.html">Insumos</a>
+          <a href="./ventas.html">Ventas</a>
+          <a href="./inventario.html">Inventario</a>
+          <a class="active" href="./produccion.html">Produccion</a>
+          <a href="./reportes.html">Reportes</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Produccion</p>
+            <h1>Lotes y elaboracion</h1>
+            <p class="page-subtitle">Registro de produccion conectado con recetas, vencimiento y trazabilidad.</p>
+          </div>
+          <span class="badge badge-success">Recetas activas</span>
+        </header>
+        <section class="split-layout">
+          <article class="form-card">
+            <div class="card-header"><h2>Nueva produccion</h2></div>
+            <form class="form-grid">
+              <div class="field"><label>Producto</label><select class="select"><option>Torta de Chocolate</option></select></div>
+              <div class="field"><label>Cantidad</label><input class="input" type="number" value="6" /></div>
+              <div class="field"><label>Lote</label><input class="input" value="A12-0313" /></div>
+              <div class="field"><label>Vencimiento</label><input class="input" type="date" /></div>
+            </form>
+          </article>
+          <article class="table-card">
+            <div class="card-header"><h2>Resumen de receta</h2></div>
+            <div class="mini-list">
+              <div class="mini-item"><span>Chocolate 70%</span><strong>2 kg</strong></div>
+              <div class="mini-item"><span>Harina premium</span><strong>3 kg</strong></div>
+              <div class="mini-item"><span>Huevos</span><strong>18 und</strong></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
     <script type="module" src="../js/produccion.js"></script>
   </body>
 </html>
