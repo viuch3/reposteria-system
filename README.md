@@ -21,6 +21,7 @@ En esta etapa ya existe la estructura base del proyecto, el entorno virtual inic
 - [Alcance MVP](/Users/viuch3/Documents/reposteria-system/docs/mvp-scope.md)
 - [Stack tecnico](/Users/viuch3/Documents/reposteria-system/docs/technical-stack.md)
 - [Configuracion PostgreSQL](/Users/viuch3/Documents/reposteria-system/docs/postgresql-setup.md)
+- [Modelo ER inicial](/Users/viuch3/Documents/reposteria-system/docs/er-model.md)
 
 ## Forma de trabajo
 
