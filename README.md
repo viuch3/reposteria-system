@@ -19,6 +19,7 @@ En esta etapa ya existe la estructura base del proyecto y el entorno virtual ini
 
 - [Alcance MVP](/Users/viuch3/Documents/reposteria-system/docs/mvp-scope.md)
 - [Stack tecnico](/Users/viuch3/Documents/reposteria-system/docs/technical-stack.md)
+- [Configuracion PostgreSQL](/Users/viuch3/Documents/reposteria-system/docs/postgresql-setup.md)
 
 ## Forma de trabajo
 
@@ -75,4 +76,19 @@ La aplicacion FastAPI se creara en la siguiente fase. Cuando exista `backend/app
 ```bash
 source backend/venv/bin/activate
 uvicorn app.main:app --reload
+```
+
+## Configuracion de entorno
+
+Antes de conectar la base de datos:
+
+```bash
+cp backend/.env.example backend/.env
+```
+
+Despues ajusta `DATABASE_URL` con tus credenciales reales y prueba la conexion:
+
+```bash
+cd backend
+python test_db.py
 ```
