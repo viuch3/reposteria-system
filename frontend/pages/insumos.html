@@ -29,31 +29,43 @@
             <h1>Materias primas y vencimientos</h1>
             <p class="page-subtitle">Vista pensada para control de compras, alertas y reposicion.</p>
           </div>
-          <a class="button button-primary" href="#">Nuevo insumo</a>
+          <a class="button button-primary" href="#supply-form">Nuevo insumo</a>
         </header>
         <section class="section-grid">
           <article class="table-card">
             <div class="card-header"><h2>Alertas de vencimiento</h2><span class="badge badge-warning">3 proximas</span></div>
-            <div class="mini-list">
-              <div class="mini-item"><span>Crema para batir</span><strong>15 Mar</strong></div>
-              <div class="mini-item"><span>Queso crema</span><strong>18 Mar</strong></div>
-              <div class="mini-item"><span>Fresas</span><strong>Hoy</strong></div>
+            <div class="mini-list" data-expiring-list>
+              <div class="mini-item"><span>Cargando</span><strong>...</strong></div>
             </div>
           </article>
           <article class="table-card">
             <div class="card-header"><h2>Stock bajo</h2><span class="badge badge-danger">Reposicion</span></div>
-            <div class="mini-list">
-              <div class="mini-item"><span>Huevos</span><strong>24 und</strong></div>
-              <div class="mini-item"><span>Harina premium</span><strong>8 kg</strong></div>
+            <div class="mini-list" data-low-stock-list>
+              <div class="mini-item"><span>Cargando</span><strong>...</strong></div>
             </div>
           </article>
         </section>
+        <article class="form-card" style="margin-top: 1.5rem;">
+          <div class="card-header"><h2>Registrar insumo</h2><span class="badge badge-success">Admin</span></div>
+          <form class="form-grid" id="supply-form" data-supply-form>
+            <div class="field"><label for="supply-name">Nombre</label><input class="input" id="supply-name" name="name" required /></div>
+            <div class="field"><label for="supply-category">Categoria</label><input class="input" id="supply-category" name="category" /></div>
+            <div class="field"><label for="supply-unit">Unidad</label><input class="input" id="supply-unit" name="unit_of_measure" value="unidad" required /></div>
+            <div class="field"><label for="supply-cost">Costo unitario</label><input class="input" id="supply-cost" name="unit_cost" type="number" step="0.01" required /></div>
+            <div class="field"><label for="supply-stock">Stock actual</label><input class="input" id="supply-stock" name="current_stock" type="number" step="0.01" value="0" /></div>
+            <div class="field"><label for="supply-min">Stock minimo</label><input class="input" id="supply-min" name="min_stock" type="number" step="0.01" value="0" /></div>
+            <div class="field"><label for="supply-max">Stock maximo</label><input class="input" id="supply-max" name="max_stock" type="number" step="0.01" value="0" /></div>
+            <div class="field"><label for="supply-provider">Proveedor</label><input class="input" id="supply-provider" name="supplier" /></div>
+            <div class="field"><label for="supply-expiration">Vencimiento</label><input class="input" id="supply-expiration" name="expiration_date" type="date" /></div>
+            <div class="field" style="grid-column: 1 / -1;"><span class="badge badge-warning" data-supply-message>Completa los campos para registrar un nuevo insumo.</span></div>
+            <div class="field" style="grid-column: 1 / -1;"><button class="button button-primary" type="submit">Guardar insumo</button></div>
+          </form>
+        </article>
         <article class="table-card" style="margin-top: 1.5rem;">
           <table class="table">
             <thead><tr><th>Insumo</th><th>Categoria</th><th>Stock</th><th>Vence</th><th>Costo</th></tr></thead>
-            <tbody>
-              <tr><td>Harina premium</td><td>Secos</td><td>8 kg</td><td>12/06/2026</td><td>$ 4.500</td></tr>
-              <tr><td>Chocolate 70%</td><td>Reposteria</td><td>3 kg</td><td>21/05/2026</td><td>$ 19.000</td></tr>
+            <tbody data-supplies-body>
+              <tr><td colspan="5" class="empty-state">Cargando insumos...</td></tr>
             </tbody>
           </table>
         </article>
