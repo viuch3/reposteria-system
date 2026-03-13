@@ -6,6 +6,7 @@ from app.services.product_service import (
     list_products,
     update_product,
 )
+from app.services.sale_service import create_sale, get_sale_by_id, list_sales
 from app.services.supply_service import (
     create_supply,
     get_supply_by_id,
@@ -24,15 +25,18 @@ from app.services.user_service import (
 
 __all__ = [
     "create_product",
+    "create_sale",
     "create_supply",
     "create_user",
     "deactivate_product",
     "get_product_by_code",
     "get_product_by_id",
+    "get_sale_by_id",
     "get_supply_by_id",
     "get_user_by_email",
     "get_user_by_id",
     "list_products",
+    "list_sales",
     "list_supplies",
     "list_users",
     "set_user_active_status",

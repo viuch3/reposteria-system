@@ -29,7 +29,6 @@ class SaleBase(BaseModel):
     sale_time: time
     sales_channel: str | None = Field(default=None, max_length=50)
     notes: str | None = Field(default=None, max_length=255)
-    user_id: int = Field(..., gt=0)
 
     @field_validator("sales_channel", "notes")
     @classmethod

@@ -16,6 +16,7 @@ from app.schemas.sale_schema import (
     SaleCreate,
     SaleDetailCreate,
     SaleDetailResponse,
+    SaleBase,
     SaleResponse,
 )
 from app.schemas.supply_schema import SupplyCreate, SupplyResponse, SupplyUpdate
@@ -42,6 +43,7 @@ __all__ = [
     "RecipeDetailCreate",
     "RecipeDetailResponse",
     "SaleCreate",
+    "SaleBase",
     "SaleDetailCreate",
     "SaleDetailResponse",
     "SaleResponse",
