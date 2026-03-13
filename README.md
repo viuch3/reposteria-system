@@ -6,14 +6,15 @@ Sistema web para la gestion operativa de una reposteria. El objetivo es registra
 
 El proyecto se construira por fases para mantener entregables pequenos, claros y faciles de subir con `git push`.
 
-En esta etapa ya existe la estructura base del proyecto y el entorno virtual inicial del backend.
+En esta etapa ya existe la estructura base del proyecto, el entorno virtual inicial del backend y una aplicacion FastAPI arrancable.
 
 ## Roadmap de trabajo
 
 1. Fase 0: documentacion inicial del MVP y stack tecnico.
 2. Fase 1: estructura base del proyecto e inicializacion del repositorio.
 3. Fase 2: configuracion de PostgreSQL y variables de entorno.
-4. Fase 3 en adelante: backend, base de datos, frontend, reportes y despliegue.
+4. Fase 3: estructura profesional del backend y arranque de FastAPI.
+5. Fase 4 en adelante: modelado de base de datos, frontend, reportes y despliegue.
 
 ## Documentacion
 
@@ -35,7 +36,9 @@ Cada fase debe cerrar con:
 ```text
 reposteria-system/
 ├── backend/
+│   ├── app/
 │   ├── requirements.txt
+│   ├── test_db.py
 │   └── venv/
 ├── docs/
 ├── frontend/
@@ -71,12 +74,20 @@ pip install -r backend/requirements.txt
 
 ## Como levantar el backend
 
-La aplicacion FastAPI se creara en la siguiente fase. Cuando exista `backend/app/main.py`, el comando esperado sera:
+Desde la raiz del proyecto:
 
 ```bash
 source backend/venv/bin/activate
+cd backend
 uvicorn app.main:app --reload
 ```
+
+Rutas base disponibles despues de iniciar:
+
+- `http://127.0.0.1:8000/`
+- `http://127.0.0.1:8000/health`
+- `http://127.0.0.1:8000/api/v1/health/`
+- `http://127.0.0.1:8000/docs`
 
 ## Configuracion de entorno
 
