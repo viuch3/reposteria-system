@@ -92,6 +92,7 @@ Rutas base disponibles despues de iniciar:
 - `http://127.0.0.1:8000/api/v1/auth/me`
 - `http://127.0.0.1:8000/api/v1/health/`
 - `http://127.0.0.1:8000/api/v1/products/`
+- `http://127.0.0.1:8000/api/v1/supplies/`
 - `http://127.0.0.1:8000/api/v1/users/`
 - `http://127.0.0.1:8000/docs`
 
