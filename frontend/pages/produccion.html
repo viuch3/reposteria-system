@@ -35,21 +35,29 @@
           <article class="form-card">
             <div class="card-header"><h2>Nueva produccion</h2></div>
             <form class="form-grid">
-              <div class="field"><label>Producto</label><select class="select"><option>Torta de Chocolate</option></select></div>
-              <div class="field"><label>Cantidad</label><input class="input" type="number" value="6" /></div>
-              <div class="field"><label>Lote</label><input class="input" value="A12-0313" /></div>
-              <div class="field"><label>Vencimiento</label><input class="input" type="date" /></div>
+              <div class="field"><label for="production-product">Producto</label><select class="select" id="production-product" data-production-product></select></div>
+              <div class="field"><label for="production-quantity">Cantidad</label><input class="input" id="production-quantity" data-production-quantity type="number" value="1" min="1" /></div>
+              <div class="field"><label for="production-batch">Lote</label><input class="input" id="production-batch" data-production-batch value="L-001" /></div>
+              <div class="field"><label for="production-expiration">Vencimiento</label><input class="input" id="production-expiration" data-production-expiration type="date" /></div>
+              <div class="field" style="grid-column: 1 / -1;"><span class="badge badge-warning" data-production-message>Completa los datos del lote para registrar la produccion.</span></div>
+              <div class="field" style="grid-column: 1 / -1;"><button class="button button-primary" type="button" data-production-submit>Registrar produccion</button></div>
             </form>
           </article>
           <article class="table-card">
             <div class="card-header"><h2>Resumen de receta</h2></div>
-            <div class="mini-list">
-              <div class="mini-item"><span>Chocolate 70%</span><strong>2 kg</strong></div>
-              <div class="mini-item"><span>Harina premium</span><strong>3 kg</strong></div>
-              <div class="mini-item"><span>Huevos</span><strong>18 und</strong></div>
+            <div class="mini-list" data-production-recipe>
+              <div class="mini-item"><span>Cargando receta</span><strong>...</strong></div>
             </div>
           </article>
         </section>
+        <article class="table-card" style="margin-top: 1.5rem;">
+          <table class="table">
+            <thead><tr><th>Fecha</th><th>Producto</th><th>Cantidad</th><th>Lote</th><th>Vence</th></tr></thead>
+            <tbody data-production-body>
+              <tr><td colspan="5" class="empty-state">Cargando producciones...</td></tr>
+            </tbody>
+          </table>
+        </article>
       </main>
     </div>
     <script type="module" src="../js/produccion.js"></script>

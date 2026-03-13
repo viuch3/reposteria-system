@@ -29,14 +29,26 @@
             <h1>Movimientos y ajustes</h1>
             <p class="page-subtitle">Entradas, salidas y mermas auditadas por usuario y motivo.</p>
           </div>
-          <a class="button button-primary" href="#">Registrar movimiento</a>
+          <a class="button button-primary" href="#inventory-form">Registrar movimiento</a>
         </header>
+        <article class="form-card" style="margin-bottom: 1.5rem;">
+          <div class="card-header"><h2>Nuevo movimiento</h2><span class="badge badge-warning">Admin o Produccion</span></div>
+          <div class="form-grid" id="inventory-form">
+            <div class="field"><label for="inventory-item-type">Tipo de item</label><select class="select" id="inventory-item-type" data-inventory-item-type><option value="product">Producto</option><option value="supply">Insumo</option></select></div>
+            <div class="field"><label for="inventory-product">Producto</label><select class="select" id="inventory-product" data-inventory-product></select></div>
+            <div class="field"><label for="inventory-supply">Insumo</label><select class="select" id="inventory-supply" data-inventory-supply></select></div>
+            <div class="field"><label for="inventory-movement-type">Movimiento</label><select class="select" id="inventory-movement-type" data-inventory-movement-type><option value="entrada">Entrada</option><option value="salida">Salida</option><option value="merma">Merma</option></select></div>
+            <div class="field"><label for="inventory-quantity">Cantidad</label><input class="input" id="inventory-quantity" data-inventory-quantity type="number" step="0.01" value="1" /></div>
+            <div class="field" style="grid-column: 1 / -1;"><label for="inventory-reason">Motivo</label><input class="input" id="inventory-reason" data-inventory-reason placeholder="Ej. ajuste, compra o merma" /></div>
+            <div class="field" style="grid-column: 1 / -1;"><span class="badge badge-warning" data-inventory-message>Completa los datos para registrar un movimiento.</span></div>
+            <div class="field" style="grid-column: 1 / -1;"><button class="button button-primary" type="button" data-inventory-submit>Guardar movimiento</button></div>
+          </div>
+        </article>
         <article class="table-card">
           <table class="table">
             <thead><tr><th>Fecha</th><th>Tipo</th><th>Item</th><th>Cantidad</th><th>Motivo</th><th>Usuario</th></tr></thead>
-            <tbody>
-              <tr><td>12/03/2026 09:00</td><td><span class="badge badge-success">Entrada</span></td><td>Torta de Chocolate</td><td>+6</td><td>Produccion lote A12</td><td>admin</td></tr>
-              <tr><td>12/03/2026 08:30</td><td><span class="badge badge-danger">Salida</span></td><td>Chocolate 70%</td><td>-2 kg</td><td>Produccion lote A12</td><td>produccion</td></tr>
+            <tbody data-inventory-body>
+              <tr><td colspan="6" class="empty-state">Cargando movimientos...</td></tr>
             </tbody>
           </table>
         </article>
