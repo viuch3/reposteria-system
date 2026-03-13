@@ -101,6 +101,16 @@ Rutas base disponibles despues de iniciar:
 - `http://127.0.0.1:8000/api/v1/weather/`
 - `http://127.0.0.1:8000/docs`
 
+## Como correr pruebas del backend
+
+Desde la raiz del proyecto:
+
+```bash
+source backend/venv/bin/activate
+cd backend
+pytest
+```
+
 ## Configuracion de entorno
 
 Antes de conectar la base de datos:
