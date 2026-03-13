@@ -91,6 +91,7 @@ Rutas base disponibles despues de iniciar:
 - `http://127.0.0.1:8000/api/v1/auth/login`
 - `http://127.0.0.1:8000/api/v1/auth/me`
 - `http://127.0.0.1:8000/api/v1/health/`
+- `http://127.0.0.1:8000/api/v1/users/`
 - `http://127.0.0.1:8000/docs`
 
 ## Configuracion de entorno

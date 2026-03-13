@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.core.security import create_access_token, get_password_hash, verify_password
+from app.core.security import create_access_token, verify_password
 from app.db.session import get_db
 from app.dependencies.auth import get_current_active_user
 from app.models.user_model import User
@@ -12,6 +12,7 @@ from app.schemas.user_schema import (
     UserCreate,
     UserResponse,
 )
+from app.services.user_service import create_user
 
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
@@ -25,18 +26,8 @@ def bootstrap_admin(payload: UserCreate, db: Session = Depends(get_db)) -> User:
             status_code=status.HTTP_403_FORBIDDEN,
             detail="El usuario inicial ya fue creado.",
         )
-
-    user = User(
-        name=payload.name,
-        email=payload.email,
-        password_hash=get_password_hash(payload.password),
-        role="admin",
-        is_active=True,
-    )
-    db.add(user)
-    db.commit()
-    db.refresh(user)
-    return user
+    admin_payload = payload.model_copy(update={"role": "admin", "is_active": True})
+    return create_user(db, admin_payload)
 
 
 @router.post("/login", response_model=TokenResponse)
