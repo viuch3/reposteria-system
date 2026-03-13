@@ -29,39 +29,45 @@
             <h1>Catalogo de vitrina</h1>
             <p class="page-subtitle">Tabla, formulario y filtros listos para integracion con el backend.</p>
           </div>
-          <a class="button button-primary" href="#">Nuevo producto</a>
+          <a class="button button-primary" href="#product-form">Nuevo producto</a>
         </header>
         <section class="split-layout">
           <article class="form-card">
             <div class="card-header"><h2>Crear o editar</h2><span class="badge badge-success">Admin</span></div>
-            <form class="form-grid">
-              <div class="field"><label>Codigo</label><input class="input" placeholder="TORTA-001" /></div>
-              <div class="field"><label>Nombre</label><input class="input" placeholder="Torta Red Velvet" /></div>
-              <div class="field"><label>Categoria</label><input class="input" placeholder="Tortas" /></div>
-              <div class="field"><label>Unidad</label><input class="input" placeholder="unidad" /></div>
-              <div class="field"><label>Precio venta</label><input class="input" placeholder="45000" /></div>
-              <div class="field"><label>Precio costo</label><input class="input" placeholder="28000" /></div>
+            <form class="form-grid" id="product-form" data-product-form>
+              <div class="field"><label for="code">Codigo</label><input class="input" id="code" name="code" placeholder="TORTA-001" required /></div>
+              <div class="field"><label for="name">Nombre</label><input class="input" id="name" name="name" placeholder="Torta Red Velvet" required /></div>
+              <div class="field"><label for="category">Categoria</label><input class="input" id="category" name="category" placeholder="Tortas" /></div>
+              <div class="field"><label for="unit_of_measure">Unidad</label><input class="input" id="unit_of_measure" name="unit_of_measure" value="unidad" required /></div>
+              <div class="field"><label for="sale_price">Precio venta</label><input class="input" id="sale_price" name="sale_price" type="number" step="0.01" placeholder="45000" required /></div>
+              <div class="field"><label for="cost_price">Precio costo</label><input class="input" id="cost_price" name="cost_price" type="number" step="0.01" placeholder="28000" required /></div>
+              <div class="field"><label for="current_stock">Stock actual</label><input class="input" id="current_stock" name="current_stock" type="number" step="0.01" value="0" /></div>
+              <div class="field"><label for="min_stock">Stock minimo</label><input class="input" id="min_stock" name="min_stock" type="number" step="0.01" value="0" /></div>
+              <div class="field"><label for="max_stock">Stock maximo</label><input class="input" id="max_stock" name="max_stock" type="number" step="0.01" value="0" /></div>
+              <div class="field"><label for="status">Estado</label><select class="select" id="status" name="status"><option value="activo">Activo</option><option value="inactivo">Inactivo</option></select></div>
+              <div class="field" style="grid-column: 1 / -1;"><label for="description">Descripcion</label><textarea class="textarea" id="description" name="description" placeholder="Descripcion corta del producto"></textarea></div>
+              <div class="field" style="grid-column: 1 / -1;"><span class="badge badge-warning" data-product-message>Conecta este formulario con el backend para crear productos reales.</span></div>
+              <div class="field" style="grid-column: 1 / -1;"><button class="button button-primary" type="submit">Guardar producto</button></div>
             </form>
           </article>
           <article class="table-card">
             <div class="card-header"><h2>Resumen rapido</h2><span class="badge badge-warning">12 activos</span></div>
             <div class="mini-list">
-              <div class="mini-item"><span>Mas vendido</span><strong>Cheesecake</strong></div>
-              <div class="mini-item"><span>Stock critico</span><strong>Brownie x6</strong></div>
-              <div class="mini-item"><span>Margen alto</span><strong>Galletas premium</strong></div>
+              <div class="mini-item"><span>Productos activos</span><strong data-products-active>0 activos</strong></div>
+              <div class="mini-item"><span>Stock critico</span><strong data-products-low>Sin alertas</strong></div>
+              <div class="mini-item"><span>Primer producto</span><strong data-products-top>Sin datos</strong></div>
             </div>
           </article>
         </section>
         <article class="table-card" style="margin-top: 1.5rem;">
           <div class="toolbar">
-            <input class="input" placeholder="Buscar por nombre o codigo" />
+            <input class="input" placeholder="Buscar por nombre o codigo" data-product-search />
             <select class="select"><option>Todas las categorias</option></select>
           </div>
           <table class="table">
             <thead><tr><th>Codigo</th><th>Producto</th><th>Precio</th><th>Stock</th><th>Estado</th></tr></thead>
-            <tbody>
-              <tr><td>TORTA-001</td><td>Torta de Chocolate</td><td>$ 45.000</td><td>8</td><td><span class="badge badge-success">Activo</span></td></tr>
-              <tr><td>GAL-004</td><td>Galleta mantequilla</td><td>$ 6.000</td><td>24</td><td><span class="badge badge-success">Activo</span></td></tr>
+            <tbody data-products-body>
+              <tr><td colspan="5" class="empty-state">Cargando productos...</td></tr>
             </tbody>
           </table>
         </article>

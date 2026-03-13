@@ -28,7 +28,7 @@
         <div class="login-card">
           <p class="eyebrow">Login</p>
           <h2>Bienvenido</h2>
-          <form class="form-grid" style="grid-template-columns: 1fr;">
+          <form class="form-grid" style="grid-template-columns: 1fr;" data-login-form>
             <div class="field">
               <label for="email">Correo</label>
               <input class="input" id="email" type="email" placeholder="admin@reposteria.com" />
@@ -38,9 +38,9 @@
               <input class="input" id="password" type="password" placeholder="Ingresa tu contrasena" />
             </div>
             <div class="field">
-              <span class="badge badge-warning">Los mensajes de error apareceran aqui.</span>
+              <span class="badge badge-warning" data-login-message>Ingresa tus credenciales para continuar.</span>
             </div>
-            <button class="button button-primary" type="button">Iniciar sesion</button>
+            <button class="button button-primary" type="submit">Iniciar sesion</button>
           </form>
         </div>
       </section>
