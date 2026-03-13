@@ -110,6 +110,23 @@ a {
   margin-bottom: var(--space-5);
 }
 
+.brand-logo {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.brand-logo-large {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 1rem;
+}
+
 .sidebar-brand h1 {
   margin: 0.4rem 0 0;
   font-size: 1.8rem;
